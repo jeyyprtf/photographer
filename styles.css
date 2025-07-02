@@ -1,0 +1,505 @@
+:root {
+    --black: #000000;
+    --dark: #161617;
+    --light: #cccccc;
+    --lighter: #f5f5f7;
+    --white: #ffffff;
+    --accent-blue: #0A84FF;
+    --secondary-gray: #1d1d1f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro', sans-serif;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--light);
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background-color: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--lighter);
+}
+
+.nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-blue);
+}
+
+.section {
+    min-height: 100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    /* display: flex;
+    flex-direction: column; */
+    /* justify-content: center; */
+}
+
+.home {
+    min-height: 100vh;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+/* Previous CSS remains the same, add these new styles */
+.carousel-container {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.carousel {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel input[type="radio"] {
+    display: none;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 600%; /* Disesuaikan untuk 6 item */
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    width: 16.666%; /* 100% / 6 = 16.666% */
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 1;
+    object-fit: cover;
+}
+
+/* Carousel radio control logic */
+#carousel-1:checked ~ .carousel-inner {
+    transform: translateX(0%);
+}
+#carousel-2:checked ~ .carousel-inner {
+    transform: translateX(-16.666%);
+}
+#carousel-3:checked ~ .carousel-inner {
+    transform: translateX(-33.333%);
+}
+#carousel-4:checked ~ .carousel-inner {
+    transform: translateX(-50%);
+}
+#carousel-5:checked ~ .carousel-inner {
+    transform: translateX(-66.666%);
+}
+#carousel-6:checked ~ .carousel-inner {
+    transform: translateX(-83.333%);
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-controls label {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-controls label:hover,
+input[type="radio"]:checked + label {
+    background-color: var(--accent-blue);
+}
+
+.carousel-content {
+    padding: 50px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.854), transparent);
+    color: var(--light);
+}
+
+.carousel-sub-content {
+    color: var(--light);
+
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-top: 0px;
+    padding-bottom: 100px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.home-header {
+    font-size: 50px;
+    color: var(--white);
+}
+
+.home-sub-header {
+    color: var(--lighter);
+}
+
+.home-text {
+    flex: 1;
+    font-size: large;
+}
+
+.home-desc {
+    max-width: 70%;
+    font-size: large;
+}
+
+.home-image-headshot {
+    max-width: 350px;
+    border-radius: 20px;
+}
+
+.photo-text {
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--light);
+}
+
+.video {
+    width: 100%;
+    height: 15vh;
+    color: var(--lighter);
+}
+
+.videos {
+    padding-top: 50px;
+}
+
+.projects h2, .about-header {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--lighter);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    padding: 0;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card-image {
+    width: 100%;
+    /* height: 250px; Sesuaikan tinggi sesuai kebutuhan */
+    object-fit: cover;
+    filter: brightness(0.8); /* Membuat gambar sedikit gelap */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    aspect-ratio: 3/4;
+}
+
+.project-card:hover .project-card-image {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.project-card-content {
+    padding: 50px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.854), transparent);
+    color: var(--light);
+}
+
+.project-card-sub-content {
+    color: var(--light);
+}
+
+.project-link {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: var(--text-light);
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+}
+
+/* .project-img {
+    background: linear-gradient(to bottom, var(--secondary-gray), rgb(0, 0, 0));
+    padding: 30px;
+    border-radius: 15px;
+    height: 45vh;
+    width: 130%;
+    position: relative;
+} */
+
+.project-text {
+    position: absolute;
+    bottom: 30px;
+}
+
+/* .project-link {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: var(--text-light);
+    width: 40px;
+    height: 40px;
+} */
+
+/* Styles untuk video modal */
+
+/* Video Gallery */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px;
+}
+
+.video-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.video-card-content {
+    padding-left: 3%;
+    padding-bottom: 2.5%;
+    padding-top: 2.5%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.854), transparent);
+    color: var(--light);
+    transition: transform 0.3s ease;
+}
+/* .video-card-content:hover {
+    height: 1px;
+    width: 1px;
+} */
+
+.video-card-image {
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover .video-card-image {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+
+.video-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    aspect-ratio: 16/9;
+}
+
+.about-content {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-photo img {
+    max-width: 500px;
+}
+
+.about-text {
+    font-size: large;
+}
+
+.contact {
+    color: var(--white);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-icon {
+    color: var(--light);
+    width: 30px;
+    height: 30px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-gray);
+}
+
+@media (max-width: 768px) {
+
+    .carousel-content {
+        padding: 50px;
+        padding-left: 10px;
+        padding-bottom: 25px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-size: small;
+    }
+    
+    .carousel-sub-content {
+        color: var(--light);
+        line-height: 1.2;
+    
+    }
+
+    .home-content {
+        flex-direction: column;
+    }
+
+    .projects {
+        padding-bottom: 20%;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        size: 80vh;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        margin-top: 20px;
+    }
+
+    .carousel-item img {
+        aspect-ratio: 16/9;
+    }
+
+    .home-desc {
+        max-width: 100%;
+    }
+
+    .section {
+        padding-top: 120px;
+    }
+
+    .video-gallery {
+        grid-template-columns: 1fr;
+        gap: 10%;
+    }
+
+    .video-card {
+        border-radius: 20px;
+    }
+
+    .video-card-content {
+        line-height: 1.3;
+        font-size: smaller;
+        padding: 3%;
+    }
+
+    .video-card-sub-content {
+        line-height: 1.2;
+    }
+
+    .projects {
+        /* padding-bottom: 100px; */
+    }
+
+    .about {
+        padding-top: 55px;
+    }
+
+    .about-content {
+        display: contents;
+        align-items: center;
+    }
+
+    .about-photo {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        display: flex;
+        right: 6%;
+
+    }
+
+    .about-text-p {
+        font-size: smaller;
+    }
+
+    .about-text-p1 {
+        width: 65%;
+    }
+}
+
+@media (max-width: 495px) {
+    .about-text-p1 {
+        width: 55%;
+    }
+}

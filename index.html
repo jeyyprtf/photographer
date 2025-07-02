@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan - Videographer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo" onclick="scrollToSection('home')">JUAN</div>
+        <div class="nav-links">
+            <a href="#home" onclick="scrollToSection('home', event)">Home</a>
+            <a href="#projects" onclick="scrollToSection('projects', event)">Projects</a>
+            <a href="#info" onclick="scrollToSection('about', event)">About Me</a>        
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="home">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <!-- Tambahkan input radio untuk carousel tambahan -->
+                    <input type="radio" name="carousel-control" id="carousel-1" checked>
+                    <input type="radio" name="carousel-control" id="carousel-2">
+                    <input type="radio" name="carousel-control" id="carousel-3">
+                    <input type="radio" name="carousel-control" id="carousel-4">
+                    <input type="radio" name="carousel-control" id="carousel-5">
+                    <input type="radio" name="carousel-control" id="carousel-6">
+            
+                    <!-- Tambahkan slide baru -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <a href="">
+                                <img src="images/carousel-image-1.webp" alt="Landing Page - Foto wisuda perkelas">
+                                <div class="carousel-content">
+                                    <h3>Abadikan Momen Berkesan</h3>
+                                    <p class="carousel-sub-content">Foto Wisuda bersama wali kelas angkatan 2023.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://www.instagram.com/p/DAVtJ9ES1X6/?img_index=1">
+                                <img src="images/carousel-image-2.webp" alt="Mini Soccer Chickin Indonesia vs Jala">
+                                <div class="carousel-content">
+                                    <h3>Mini Soccer Chickin vs Jala</h3>
+                                    <p class="carousel-sub-content">Dokumentasi kegiatan Fun Match Mini Soccer CHICKIN Indonesia vs JALA.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="">
+                                <img src="images/carousel-image-3.webp" alt="International Dance Yogyakarta">
+                                <div class="carousel-content">
+                                    <h3>International Dance Yogyakarta</h3>
+                                    <p class="carousel-sub-content">Dokumentasi kegiatan dance internasional dari segala penjuru dunia yang digelar di Yogyakarta.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="">
+                                <img src="images/carousel-image-4.webp" alt="Jobfair Skaneka">
+                                <div class="carousel-content">
+                                    <h3>Jobfair SMKN 1 Kademangan</h3>
+                                    <p class="carousel-sub-content">Dokumentasi kegiatan Jobfair yang diadakan di SMK Negeri 1 Kademangan.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="">
+                                <img src="images/carousel-image-5.webp" alt="Merayakan Kemerdekaan dengan Chickin Indonesia">
+                                <div class="carousel-content">
+                                    <h3>Rayakan Kemerdekaan Bersama Chickin</h3>
+                                    <p class="carousel-sub-content">Dokumentasi Kemeriahan Lomba 17 Agustus bersama Chickin Indonesia.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="">
+                                <img src="images/carousel-image-6.webp" alt="Carousel Image 6">
+                                <div class="carousel-content">
+                                    <h3>Personal Branding Photoshoot</h3>
+                                    <p class="carousel-sub-content">Photoshoot untuk Personal Branding dan Company Profile Profesional.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+            
+                    <!-- Tambahkan label kontrol baru -->
+                    <div class="carousel-controls">
+                        <label for="carousel-1"></label>
+                        <label for="carousel-2"></label>
+                        <label for="carousel-3"></label>
+                        <label for="carousel-4"></label>
+                        <label for="carousel-5"></label>
+                        <label for="carousel-6"></label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <section id="home" class="section home"> -->
+        
+            <div class="home-content">
+                <div class="home-text">
+                    <h1 class="home-header">Juan.</h1>
+                    <h2 class="home-sub-header">Photographer dan Videographer Profesional</h2>
+                    <p class="home-desc">
+                        Hi! Aku Fotografer dan Videografer Freelance yang siap bikin Visual 
+                        keren buat Personal Branding, Company Profile, atau Project seru lainnya. 
+                        Hasil yang Impactful dan Profesional jadi PRIORITAS UTAMA!
+                    </p>
+                </div>
+                <div class="home-image">
+                    <img src="images/headshot.webp" alt="Juan Headshot" class="home-image-headshot">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/inijuan/" class="social-icon">
+                            <img src="images/icon/linkedin.svg" alt="">
+                        </a>
+                        <a href="mailto:juanmadhy425@gmail.com" class="social-icon">
+                            <img src="images/icon/email.svg" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/jeyy_prtf/" class="social-icon">
+                            <img src="images/icon/instagram.svg" alt="">
+                        </a>
+                        <a href="https://www.tiktok.com/@j4juanm/" class="social-icon">
+                            <img src="images/icon/tiktok.svg" alt="">
+                        </a>
+                        <a href="https://wa.me/+6288805385353?text=Terima%20kasih%20sudah%20menghubungi%20kami.%20Silakan%20tulis%20pertanyaan%20Anda." class="social-icon">
+                            <img src="images/icon/whatsapp.svg" alt="">
+                        </a>
+                        <!-- Tambahkan icon sosmed lainnya -->
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="projects" class="section projects">
+
+            <h2>PROJECTS</h2>
+                <h3 class="photo-text">PHOTOS</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <a href="https://www.instagram.com/p/DC319O6J5_d/?img_index=5">
+                            <img src="images/card1.webp" alt="Proyek 1" class="project-card-image">
+                            <div class="project-card-content">
+                                <h3>Misooriental</h3>
+                                <p class="project-card-sub-content">Photoshoot produk makanan bersama @misooriental</p>
+                            </div>
+                            <a href="https://www.instagram.com/p/DC319O6J5_d/?img_index=5" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="https://www.instagram.com/p/DCqReYPJ3fB/?img_index=1">
+                            <img src="images/card2.webp" alt="Proyek 2" class="project-card-image">
+                            <div class="project-card-content">
+                                <h3>Pawon Mbah Gito</h3>
+                                <p class="project-card-sub-content">Photoshoot produk makanan bersama @pawonmbahgito</p>
+                            </div>
+                            <a href="#" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="https://www.instagram.com/p/DCdzLP2pzPP/?img_index=1">
+                            <img src="images/card3.webp" alt="Proyek 2" class="project-card-image">
+                            <div class="project-card-content">
+                                <h3>Kopi Roti Dua Kerbau</h3>
+                                <p class="project-card-sub-content">Photoshoot produk makanan bersama @kopirotiduakerbau</p>
+                            </div>
+                            <a href="#" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="https://www.instagram.com/p/C0WByhXLV6w/?img_index=1">
+                            <img src="images/card4.webp" alt="Proyek 2" class="project-card-image">
+                            <div class="project-card-content">
+                                <h3>Tosari Photo Marathon 2023</h3>
+                                <p class="project-card-sub-content">Maraton Fotografi yang diadakan oleh @tosarisanjadesa dan @tpmc2023 di desa Tosari - Bromo</p>
+                            </div>
+                            <a href="#" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <a href="https://drive.google.com/drive/folders/1xvlj_vbCO78yUpJ9z2zr0-fnwtwDFxsB?usp=sharing">
+                            <img src="images/card5.webp" alt="Proyek 2" class="project-card-image">
+                            <div class="project-card-content">
+                                <h3>Merayakan Kemerdekaan bersama Chickin</h3>
+                                <p class="project-card-sub-content">Dokumentasi kegiatan Lomba 17 Agustus Chickin Indonesia</p>
+                            </div>
+                            <a href="#" class="project-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </a>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/card6.webp" alt="Proyek 2" class="project-card-image">
+                        <div class="project-card-content">
+                            <h3>Profesional Photoshoot</h3>
+                            <p class="project-card-sub-content">Photoshoot Profesional untuk perusahaan, organisasi maupun personal branding</p>
+                        </div>
+                        <a href="#" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                    </div>
+                    <!-- Tambahkan project card lainnya dengan cara yang sama -->
+                </div>
+            </div>
+            <h3 class="photo-text videos">VIDEOS</h3>
+            <div class="video-gallery">
+                <div class="video-card">
+                    <a href="https://youtu.be/YDe17neHTFw?si=ZYySRqA1htehGox5">
+                        <img src="images/video1.webp" alt="" class="video-card-image">
+                        <div class="video-card-content">
+                            <h3>Video Angkatan SKANEKA 2024</h3>
+                            <p class="video-card-sub-content">Video kenangan kelulusan angkatan 2024 SMKN 1 Kademangan</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="https://youtu.be/4RjrWyGdU7k?si=FpIMuzVDajq29FLi">
+                        <img src="images/video2.webp" alt="" class="video-card-image">
+                        <div class="video-card-content">
+                            <h3>Video Profil Si Tanam</h3>
+                            <p class="video-card-sub-content">Video profil alat inovasi di bidang pertanian, Si Tanam</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="https://youtu.be/PKuosfHM1NE?si=OtSTB6N96fim5kXm">
+                        <img src="images/video3.webp" alt="" class="video-card-image">
+                        <div class="video-card-content">
+                            <h3>Video Event Karnaval</h3>
+                            <p class="video-card-sub-content">Video dokumentasi event karnaval Dawuhan 2024</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="https://www.tiktok.com/@j4juanm/video/7417018120017022225">
+                        <img src="images/video4.webp" alt="" class="video-card-image">
+                        <div class="video-card-content">
+                            <h3>Short Movie Cinematic</h3>
+                            <p class="video-card-sub-content">Video sinematik dengan visual yang memukau</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="video-card">
+                    <a href="https://www.tiktok.com/@j4juanm/video/7426989553598221574">
+                        <img src="images/video5.webp" alt="" class="video-card-image">
+                        <div class="video-card-content">
+                            <h3>Short Movie Cinematic</h3>
+                            <p class="video-card-sub-content">Film dengan cerita singkat dan visual yang memukau dalam 2 menit</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="video-card">
+                        <a href="https://www.instagram.com/reel/C8XVT5bSxbx/" >
+                            <img src="images/video6.webp" alt="" class="video-card-image">
+                            <div class="video-card-content">
+                                <h3>E-Sports Polres Kota Blitar</h3>
+                                <p class="video-card-sub-content">Dokumentasi event e-sports yang diadakan polres kota blitar</p>
+                            </div>
+                        </a>
+                </div>
+                <!-- Tambahkan 3 card lainnya -->
+            </div>
+        </section>
+ 
+
+        <section id="about" class="section about">
+            <br>
+            <br>
+            <br>
+            <h2 class="about-header">ABOUT ME</h2>
+            <div class="about-content">
+                <div class="about-photo">
+                    <img src="images/headshot.webp" alt="">
+                </div>
+                <div class="about-text">
+                    <h2>Juan Madhy.</h2>
+                    <div class="about-text-p">
+                        <p class="about-text-p1">
+                            Saya adalah fotografer dan videografer freelance profesional dengan pengalaman
+                             lebih dari 3 tahun di bidang fotografi dan videografi. Berawal dari peran sebagai
+                              Content Creator di SMK Negeri 1 Kademangan, saya telah mengembangkan keahlian
+                               dan passion saya dalam menciptakan visual yang memukau.
+                        </p>
+                        <p>
+                            Selama karier saya, saya telah menangani berbagai proyek, mulai dari dokumentasi kegiatan, 
+                            photoshoot untuk organisasi dan personal branding, hingga pembuatan video seperti company 
+                            profile, video produk inovasi, video event karnaval, dan short movie. Setiap karya yang saya hasilkan 
+                            bertujuan untuk merepresentasikan cerita dan tujuan klien secara maksimal, dengan kualitas visual 
+                            yang tinggi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="social-links">
+                <a href="#" class="social-icon">
+                    <img src="images/icon/linkedin.svg" alt="">
+                </a>
+                <a href="#" class="social-icon">
+                    <img src="images/icon/email.svg" alt="">
+                </a>
+                <a href="#" class="social-icon">
+                    <img src="images/icon/instagram.svg" alt="">
+                </a>
+                <a href="#" class="social-icon">
+                    <img src="images/icon/tiktok.svg" alt="">
+                </a>
+                <a href="#" class="social-icon">
+                    <img src="images/icon/whatsapp.svg" alt="">
+                </a>
+                <!-- Tambahkan icon sosmed lainnya -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Juan. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
